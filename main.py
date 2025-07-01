@@ -86,10 +86,7 @@ BASE_DIR = Path(__file__).resolve().parent
 NUCLEI_BIN = os.getenv("NUCLEI_BIN", "/usr/local/bin/nuclei")
 SUBFINDER_BIN = os.getenv("SUBFINDER_BIN", "/usr/local/bin/subfinder")
 HTTPX_BIN = os.getenv("HTTPX_BIN", "/usr/local/bin/httpx")
-SUBFINDER_CONFIG = os.getenv("SUBFINDER_CONFIG", str(BASE_DIR / "subfinder_config.yaml"))
-SUBFINDER_RESOLVERS = os.getenv("SUBFINDER_RESOLVERS", "")
-VIRUSTOTAL_API_KEY = os.getenv("VIRUSTOTAL_API_KEY", "")
-SHODAN_API_KEY = os.getenv("SHODAN_API_KEY", "")
+SUBFINDER_RESOLVERS = os.getenv("SUBFINDER_RESOLVERS", "8.8.8.8,1.1.1.1")
 SCOPE_FILE = BASE_DIR / "hubspot_scope_live.txt"
 TEMP_SCOPE_FILE = BASE_DIR / "temp_scope.txt"
 TARGETS_FILE = BASE_DIR / "target.txt"
@@ -312,11 +309,9 @@ class VulnSentry:
         """Ejecuta subfinder para encontrar subdominios."""
         self.log(f"[*] 🔎 Buscando subdominios para {domain}...", logging.INFO)
         start_time = time.time()
-        cmd = [SUBFINDER_BIN, "-d", domain, "-silent", "-recursive"]
+        cmd = [SUBFINDER_BIN, "-d", domain, "-silent"]
         if SUBFINDER_RESOLVERS:
             cmd.extend(["-r", SUBFINDER_RESOLVERS])
-        if SUBFINDER_CONFIG and Path(SUBFINDER_CONFIG).exists():
-            cmd.extend(["-config", SUBFINDER_CONFIG])
         try:
             result = subprocess.run(
                 cmd,
@@ -335,7 +330,7 @@ class VulnSentry:
             return subdomains, message
         except subprocess.SubprocessError as e:
             err = getattr(e, "stderr", str(e))
-            message = f"[-] ❌ Error en subfinder: {err}\n{traceback.format_exc()}"
+            message = f"[-] ❌ Error en subfinder: {err}"
             self.log(message, logging.ERROR)
             return [], message
 
@@ -383,7 +378,7 @@ class VulnSentry:
         return live, message
 
     def merge_targets(self, live_subdomains, root_domain):
-        """Fusiona subdominios activos con target.txt, incluyendo el dominio raíz."""
+        """Fusiona subdominios activos con target.txt."""
         self.log("[*] 🔄 Fusionando dominios de target.txt...", logging.INFO)
         targets = set(live_subdomains)
         targets.add(root_domain)  # Añadir dominio raíz
@@ -644,25 +639,25 @@ class VulnSentry:
         nuclei_version = subfinder_version = httpx_version = "Error"
         try:
             result = subprocess.run([NUCLEI_BIN, "-version"], capture_output=True, text=True, timeout=10)
-            nuclei_version = result.stderr.strip() or result.stdout.strip()
+            nuclei_version = (result.stderr or result.stdout).strip()
             self.log(f"[*] Nuclei version output: {nuclei_version}", logging.DEBUG)
         except subprocess.SubprocessError as e:
-            self.log(f"[-] Error obteniendo versión de nuclei: {e}\n{traceback.format_exc()}", logging.ERROR)
+            self.log(f"[-] Error obteniendo versión de nuclei: {e}", logging.ERROR)
         try:
             result = subprocess.run([SUBFINDER_BIN, "-version"], capture_output=True, text=True, timeout=10)
-            subfinder_version = result.stderr.strip() or result.stdout.strip()
+            subfinder_version = (result.stderr or result.stdout).strip()
             self.log(f"[*] Subfinder version output: {subfinder_version}", logging.DEBUG)
         except subprocess.SubprocessError as e:
-            self.log(f"[-] Error obteniendo versión de subfinder: {e}\n{traceback.format_exc()}", logging.ERROR)
+            self.log(f"[-] Error obteniendo versión de subfinder: {e}", logging.ERROR)
         try:
             result = subprocess.run([HTTPX_BIN, "-version"], capture_output=True, text=True, timeout=10)
-            httpx_version = result.stdout.strip() or result.stderr.strip()
+            httpx_version = (result.stdout or result.stderr).strip()
             self.log(f"[*] Httpx version output: {httpx_version}", logging.DEBUG)
         except subprocess.SubprocessError as e:
-            self.log(f"[-] Error obteniendo versión de httpx: {e}\n{traceback.format_exc()}", logging.ERROR)
+            self.log(f"[-] Error obteniendo versión de httpx: {e}", logging.ERROR)
         version_info = (
             "🛡️ <b>VulnSentry: Versión</b>\n"
-            f"ℹ️ Versión del script: 1.0.1\n"
+            f"ℹ️ Versión del script: 1.0.0\n"
             f"ℹ️ Python: {sys.version.split()[0]}\n"
             f"ℹ️ python-telegram-bot: {telegram.__version__}\n"
             f"ℹ️ Nuclei: {nuclei_version}\n"
@@ -686,11 +681,7 @@ class VulnSentry:
             f"ℹ️ NUCLEI_TAGS: {TAGS}\n"
             f"ℹ️ NUCLEI_SEVERITY: {SEVERITY}\n"
             f"ℹ️ ALLOWED_CHAT_IDS: {', '.join(map(str, ALLOWED_CHAT_IDS))}\n"
-            f"ℹ️ DEBUG_MODE: {DEBUG_MODE}\n"
-            f"ℹ️ SUBFINDER_CONFIG: {SUBFINDER_CONFIG}\n"
-            f"ℹ️ SUBFINDER_RESOLVERS: {SUBFINDER_RESOLVERS or 'Default'}\n"
-            f"ℹ️ VIRUSTOTAL_API_KEY: {'Set' if VIRUSTOTAL_API_KEY else 'Not set'}\n"
-            f"ℹ️ SHODAN_API_KEY: {'Set' if SHODAN_API_KEY else 'Not set'}"
+            f"ℹ️ DEBUG_MODE: {DEBUG_MODE}"
         )
         await update.message.reply_text(config_info, parse_mode="HTML")
 
