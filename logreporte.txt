@@ -1,0 +1,276 @@
+testeosss, [7/1/25 7:17 AM]
+🛡️ VulnSentry: Versión
+ℹ️ Versión del script: 1.0.0
+ℹ️ Python: 3.12.3
+ℹ️ python-telegram-bot: 20.7
+ℹ️ Nuclei: [ [34mINF [0m] Nuclei Engine Version: v3.4.5
+[ [34mINF [0m] Nuclei Config Directory: /home/x/.config/nuclei
+[ [34mINF [0m] Nuclei Cache Directory: /home/x/.cache/nuclei
+[ [34mINF [0m] PDCP Directory: /home/x/.pdcp
+ℹ️ Subfinder: [ [34mINF [0m] Current Version: v2.7.1
+[ [34mINF [0m] Subfinder Config Directory: /home/x/.config/subfinder
+ℹ️ Httpx: __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/
+
+  projectdiscovery.io
+
+[ [34mINF [0m] Current Version: v1.7.0
+
+AIZEN 320, [7/1/25 7:17 AM]
+/target content-api-prod.nba.com
+
+testeosss, [7/1/25 7:17 AM]
+🛡️ VulnSentry: Iniciando escaneo para content-api-prod.nba.com 🎯
+
+testeosss, [7/1/25 7:17 AM]
+[+] ✅ 0 subdominios encontrados en 6.62s.
+
+testeosss, [7/1/25 7:17 AM]
+[+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt actualizado con 1 dominios únicos.
+
+testeosss, [7/1/25 7:18 AM]
+[-] ❌ Error en el pipeline para content-api-prod.nba.com: Command '['/usr/local/bin/nuclei', '-l', '/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt', '-t', '/home/x/Documents/Scrips/VulnSentry/canary.yaml', '-tags', 'xss,subdomain-takeover,idor,rce,exposure', '-severity', 'critical,high,medium', '-jsonl', '-o', '/home/x/Documents/Scrips/VulnSentry/results_20250701_071741.json', '-timeout', '20', '-c', '50', '-retries', '2']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 501, in run_scan
+    results_file, msg = await asyncio.get_running_loop().run_in_executor(self.executor, self.run_nuclei_scan, results_file)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 412, in run_nuclei_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=SUBPROCESS_TIMEOUT * 2, check=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/local/bin/nuclei', '-l', '/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt', '-t', '/home/x/Documents/Scrips/VulnSentry/canary.yaml', '-tags', 'xss,subdomain-takeover,idor,rce,exposure', '-severity', 'critical,high,medium', '-jsonl', '-o', '/home/x/Documents/Scrips/VulnSentry/results_20250701_071741.json', '-timeout', '20', '-c', '50', '-retries', '2']' returned non-zero exit status 1.
+
+testeosss, [7/1/25 7:19 AM]
+¡Bot funcionando! Prueba de conexión.
+
+AIZEN 320, [7/1/25 7:19 AM]
+
+
+AIZEN 320, [7/1/25 7:19 AM]
+/help
+
+Rose, [7/1/25 7:19 AM]
+Contact me in PM for help!
+
+testeosss, [7/1/25 7:19 AM]
+🛡️ VulnSentry: Comandos Disponibles
+
+🔍 /target domain - Inicia un escaneo para el dominio especificado (ej. example.com).
+📊 /status - Muestra el estado del escaneo actual.
+📜 /history - Lista los dominios escaneados previamente.
+🚫 /cancel - Cancela el escaneo en curso.
+ℹ️ /version - Muestra la versión del bot y herramientas.
+⚙️ /config - Muestra la configuración actual.
+⏰ /uptime - Muestra el tiempo en ejecución del bot.
+❓ /help - Muestra esta ayuda.
+
+testeosss, [7/1/25 7:19 AM]
+✅ Estado: Libre para nuevos escaneos.
+
+AIZEN 320, [7/1/25 7:19 AM]
+/status@hsv7682_bot
+
+testeosss, [7/1/25 7:19 AM]
+🛡️ VulnSentry: Versión
+ℹ️ Versión del script: 1.0.0
+ℹ️ Python: 3.12.3
+ℹ️ python-telegram-bot: 20.7
+ℹ️ Nuclei: [ [34mINF [0m] Nuclei Engine Version: v3.4.5
+[ [34mINF [0m] Nuclei Config Directory: /home/x/.config/nuclei
+[ [34mINF [0m] Nuclei Cache Directory: /home/x/.cache/nuclei
+[ [34mINF [0m] PDCP Directory: /home/x/.pdcp
+ℹ️ Subfinder: [ [34mINF [0m] Current Version: v2.7.1
+[ [34mINF [0m] Subfinder Config Directory: /home/x/.config/subfinder
+ℹ️ Httpx: __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/
+
+  projectdiscovery.io
+
+[ [34mINF [0m] Current Version: v1.7.0
+
+AIZEN 320, [7/1/25 7:19 AM]
+/version@hsv7682_bot
+
+AIZEN 320, [7/1/25 7:19 AM]
+/target content-api-prod.nba.com
+
+testeosss, [7/1/25 7:19 AM]
+🛡️ VulnSentry: Iniciando escaneo para content-api-prod.nba.com 🎯
+
+testeosss, [7/1/25 7:19 AM]
+[+] ✅ 0 subdominios encontrados en 10.58s.
+
+testeosss, [7/1/25 7:20 AM]
+[+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt actualizado con 1 dominios únicos.
+
+testeosss, [7/1/25 7:20 AM]
+[-] ❌ Error en el pipeline para content-api-prod.nba.com: Command '['/usr/local/bin/nuclei', '-l', '/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt', '-t', '/home/x/Documents/Scrips/VulnSentry/canary.yaml', '-tags', 'xss,subdomain-takeover,idor,rce,exposure', '-severity', 'critical,high,medium', '-jsonl', '-o', '/home/x/Documents/Scrips/VulnSentry/results_20250701_071949.json', '-timeout', '20', '-c', '50', '-retries', '2']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 501, in run_scan
+    results_file, msg = await asyncio.get_running_loop().run_in_executor(self.executor, self.run_nuclei_scan, results_file)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 412, in run_nuclei_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=SUBPROCESS_TIMEOUT * 2, check=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/local/bin/nuclei', '-l', '/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt', '-t', '/home/x/Documents/Scrips/VulnSentry/canary.yaml', '-tags', 'xss,subdomain-takeover,idor,rce,exposure', '-severity', 'critical,high,medium', '-jsonl', '-o', '/home/x/Documents/Scrips/VulnSentry/results_20250701_071949.json', '-timeout', '20', '-c', '50', '-retries', '2']' returned non-zero exit status 1.
+
+AIZEN 320, [7/1/25 7:20 AM]
+/status
+
+testeosss, [7/1/25 7:20 AM]
+✅ Estado: Libre para nuevos escaneos.
+
+AIZEN 320, [7/1/25 7:20 AM]
+/target *.nba.com
+
+testeosss, [7/1/25 7:20 AM]
+❓ Dominio inválido: caracteres no permitidos o formato incorrecto. log de salida   :2025-07-01 07:19:15,986 [DEBUG] Using selector: EpollSelector
+2025-07-01 07:19:15,986 [DEBUG] load_ssl_context verify=True cert=None trust_env=True http2=False
+025-07-01 07:19:31,164 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+025-07-01 07:19:31,167 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 19, 30, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=32, offset=4, type=<MessageEntityType.BOLD>), MessageEntity(length=7, offset=41, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=6, offset=49, type=<MessageEntityType.CODE>), MessageEntity(length=11, offset=110, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=127, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=8, offset=178, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=235, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=8, offset=277, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=334, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=379, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=5, offset=431, type=<MessageEntityType.BOT_COMMAND>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1121, message_thread_id=1119, reply_to_message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 19, 29, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=5, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1119, supergroup_chat_created=False, text='/help'), supergroup_chat_created=False, text='🛡️ VulnSentry: Comandos Disponibles\n\n🔍 /target domain - Inicia un escaneo para el dominio especificado (ej. example.com).\n📊 /status - Muestra el estado del escaneo actual.\n📜 /history - Lista los dominios escaneados previamente.\n🚫 /cancel - Cancela el escaneo en curso.\nℹ️ /version - Muestra la versión del bot y herramientas.\n⚙️ /config - Muestra la configuración actual.\n⏰ /uptime - Muestra el tiempo en ejecución del bot.\n❓ /help - Muestra esta ayuda.')
+2025-07-01 07:19:31,169 [DEBUG] Exiting: send_message
+2025-07-01 07:19:33,513 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:19:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'364'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+025-07-01 07:19:35,647 [DEBUG] Entering: get_updates
+2025-07-01 07:19:35,648 [DEBUG] Processing update Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 19, 35, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=20, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1124, supergroup_chat_created=False, text='/version@hsv7682_bot'), update_id=49347885)
+2025-07-01 07:19:35,733 [DEBUG] [*] Nuclei version output: [INF] Nuclei Engine Version: v3.4.5
+[INF] Nuclei Config Directory: /home/x/.config/nuclei
+[INF] Nuclei Cache Directory: /home/x/.cache/nuclei
+[INF] PDCP Directory: /home/x/.pdcp
+2025-07-01 07:19:35,769 [DEBUG] [*] Subfinder version output: [INF] Current Version: v2.7.1
+[INF] Subfinder Config Directory: /home/x/.config/subfinder
+2025-07-01 07:19:35,822 [DEBUG] [*] Httpx version output: __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/
+
+		projectdiscovery.io
+
+[INF] Current Version: v1.7.0
+025-07-01 07:19:36,086 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 19, 35, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=19, offset=4, type=<MessageEntityType.BOLD>), MessageEntity(length=2, offset=487, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=6, offset=497, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=19, offset=613, type=<MessageEntityType.URL>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1125, message_thread_id=1124, reply_to_message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 19, 35, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=20, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1124, supergroup_chat_created=False, text='/version@hsv7682_bot'), supergroup_chat_created=False, text='🛡️ VulnSentry: Versión\nℹ️ Versión del script: 1.0.0\nℹ️ Python: 3.12.3\nℹ️ python-telegram-bot: 20.7\nℹ️ Nuclei: [ [34mINF [0m] Nuclei Engine Version: v3.4.5\n[ [34mINF [0m] Nuclei Config Directory: /home/x/.config/nuclei\n[ [34mINF [0m] Nuclei Cache Directory: /home/x/.cache/nuclei\n[ [34mINF [0m] PDCP Directory: /home/x/.pdcp\nℹ️ Subfinder: [ [34mINF [0m] Current Version: v2.7.1\n[ [34mINF [0m] Subfinder Config Directory: /home/x/.config/subfinder\nℹ️ Httpx: __    __  __       _  __\n   / /_  / /_/ /_____ | |/ /\n  / __ \\/ __/ __/ __ \\|   /\n / / / / /_/ /_/ /_/ /   |\n/_/ /_/\\__/\\__/ .___/_/|_|\n             /_/\n\n  projectdiscovery.io\n\n[ [34mINF [0m] Current Version: v1.7.0')
+2025-07-01 07:19:36,089 [DEBUG] Exiting: send_message
+2025-07-01 07:19:45,959 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:19:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:19:45,960 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+rom_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1127, supergroup_chat_created=False, text='🛡️ VulnSentry: Iniciando escaneo para content-api-prod.nba.com 🎯')
+2025-07-01 07:19:49,655 [DEBUG] Exiting: send_message
+2025-07-01 07:19:49,655 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: 🛡️ &lt;b&gt;VulnSentry: Iniciando escaneo para content-a...
+2025-07-01 07:19:49,656 [INFO] [*] 🔎 Buscando subdominios para content-api-prod.nba.com...
+2025-07-01 07:19:58,888 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:19:58 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:19:58,889 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:19:58,889 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:19:58,890 [DEBUG] receive_response_body.complete
+2025-07-01 07:19:58,890 [DEBUG] response_closed.started
+2025-07-01 07:19:58,891 [DEBUG] response_closed.complete
+2025-07-01 07:19:58,892 [DEBUG] No new updates found.
+2025-07-01 07:19:58,892 [DEBUG] ()
+2025-07-01 07:19:58,893 [DEBUG] Exiting: get_updates
+2025-07-01 07:19:58,893 [DEBUG] Entering: get_updates
+2025-07-01 07:19:58,895 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:19:58,896 [DEBUG] send_request_headers.complete
+2025-07-01 07:19:58,896 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:19:58,897 [DEBUG] send_request_body.complete
+2025-07-01 07:19:58,898 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:00,239 [INFO] [+] ✅ 0 subdominios encontrados en 10.58s.
+2025-07-01 07:20:00,241 [DEBUG] Entering: send_message
+2025-07-01 07:20:00,244 [DEBUG] close.started
+2025-07-01 07:20:00,245 [DEBUG] close.complete
+2025-07-01 07:20:00,245 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:20:00,638 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f6087b01ee0>
+2025-07-01 07:20:00,639 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f60887215d0> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:20:00,795 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f60887c9040>
+2025-07-01 07:20:00,796 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:00,798 [DEBUG] send_request_headers.complete
+2025-07-01 07:20:00,799 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:20:00,800 [DEBUG] send_request_body.complete
+2025-07-01 07:20:00,800 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:01,087 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:20:01 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'277'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:20:01,088 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:20:01,088 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:20:01,089 [DEBUG] receive_response_body.complete
+2025-07-01 07:20:01,089 [DEBUG] response_closed.started
+2025-07-01 07:20:01,090 [DEBUG] response_closed.complete
+2025-07-01 07:20:01,091 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 20, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1128, supergroup_chat_created=False, text='[+] ✅ 0 subdominios encontrados en 10.58s.')
+2025-07-01 07:20:01,094 [DEBUG] Exiting: send_message
+2025-07-01 07:20:01,094 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [+] ✅ 0 subdominios encontrados en 10.58s....
+2025-07-01 07:20:01,095 [INFO] [*] No se encontraron subdominios, escaneando solo el dominio raíz: content-api-prod.nba.com
+2025-07-01 07:20:01,096 [INFO] [*] 🔄 Fusionando dominios de target.txt...
+2025-07-01 07:20:01,097 [INFO] [+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt actualizado con 1 dominios únicos.
+2025-07-01 07:20:01,098 [DEBUG] Entering: send_message
+2025-07-01 07:20:01,101 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:01,103 [DEBUG] send_request_headers.complete
+2025-07-01 07:20:01,103 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:20:01,104 [DEBUG] send_request_body.complete
+2025-07-01 07:20:01,105 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:01,368 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:20:01 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'339'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:20:01,371 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:20:01,372 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:20:01,373 [DEBUG] receive_response_body.complete
+2025-07-01 07:20:01,373 [DEBUG] response_closed.started
+2025-07-01 07:20:01,374 [DEBUG] response_closed.complete
+2025-07-01 07:20:01,376 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 20, 1, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1129, supergroup_chat_created=False, text='[+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt actualizado con 1 dominios únicos.')
+2025-07-01 07:20:01,379 [DEBUG] Exiting: send_message
+2025-07-01 07:20:01,380 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_...
+2025-07-01 07:20:01,381 [INFO] [*] 🛡️ Iniciando escaneo con nuclei...
+2025-07-01 07:20:01,383 [INFO] [*] Usando template de canario: /home/x/Documents/Scrips/VulnSentry/canary.yaml con dominio h5bbzxkgno2zbksbtglef6fr7.canarytokens.com
+2025-07-01 07:20:01,695 [ERROR] [-] ❌ Error en nuclei: 
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.4.5
+
+		projectdiscovery.io
+
+[WRN] The concurrency value is higher than max-host-error
+[INF] Adjusting max-host-error to the concurrency value: 50
+[INF] Current nuclei version: v3.4.5 (outdated)
+[INF] Current nuclei-templates version: v10.2.4 (latest)
+[WRN] Scan results upload to cloud is disabled.
+[INF] Targets loaded for current scan: 1
+[INF] Scan completed in 936.838µs. No results found.
+[FTL] Could not run nuclei: no templates provided for scan
+
+Traceback (most recent call last):
+  File &quot;/home/x/Documents/Scrips/VulnSentry/main.py&quot;, line 412, in run_nuclei_scan
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=SUBPROCESS_TIMEOUT * 2, check=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-07-01 07:20:01,699 [ERROR] [-] ❌ Error en el pipeline para content-api-prod.nba.com: Command &#x27;[&#x27;/usr/local/bin/nuclei&#x27;, &#x27;-l&#x27;, &#x27;/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt&#x27;, &#x27;-t&#x27;, &#x27;/home/x/Documents/Scrips/VulnSentry/canary.yaml&#x27;, &#x27;-tags&#x27;, &#x27;xss,subdomain-takeover,idor,rce,exposure&#x27;, &#x27;-severity&#x27;, &#x27;critical,high,medium&#x27;, &#x27;-jsonl&#x27;, &#x27;-o&#x27;, &#x27;/home/x/Documents/Scrips/VulnSentry/results_20250701_071949.json&#x27;, &#x27;-timeout&#x27;, &#x27;20&#x27;, &#x27;-c&#x27;, &#x27;50&#x27;, &#x27;-retries&#x27;, &#x27;2&#x27;]&#x27; returned non-zero exit status 1.
+Traceback (most recent call last):
+  File &quot;/home/x/Documents/Scrips/VulnSentry/main.py&quot;, line 501, in run_scan
+    results_file, msg = await asyncio.get_running_loop().run_in_executor(self.executor, self.run_nuclei_scan, results_file)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-07-01 07:20:01,701 [DEBUG] Entering: send_message
+2025-07-01 07:20:01,705 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:01,706 [DEBUG] send_request_headers.complete
+2025-07-01 07:20:01,707 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:20:01,709 [DEBUG] send_request_body.complete
+2025-07-01 07:20:01,709 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:20:01,982 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:20:01 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'2342'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:20:01,983 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:20:01,984 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:20:01,984 [DEBUG] receive_response_body.complete
+2025-07-01 07:20:01,985 [DEBUG] response_closed.started
+2025-07-01 07:20:01,986 [DEBUG] response_closed.complete
+2025-07-01 07:20:01,989 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 20, 1, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=24, offset=32, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=552, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=1073, type=<MessageEntityType.URL>), MessageEntity(length=14, offset=1125, type=<MessageEntityType.URL>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1130, supergroup_chat_created=False, text='[-] ❌ Error en el pipeline para content-api-prod.nba.com: Command \'[\'/usr/local/bin/nuclei\', \'-l\', \'/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt\', \'-t\', \'/home/x/Documents/Scrips/VulnSentry/canary.yaml\', \'-tags\', \'xss,subdomain-takeover,idor,rce,exposure\', \'-severity\', \'critical,high,medium\', \'-jsonl\', \'-o\', \'/home/x/Documents/Scrips/VulnSentry/results_20250701_071949.json\', \'-timeout\', \'20\', \'-c\', \'50\', \'-retries\', \'2\']\' returned non-zero exit status 1.\nTraceback (most recent call last):\n  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 501, in run_scan\n    results_file, msg = await asyncio.get_running_loop().run_in_executor(self.executor, self.run_nuclei_scan, results_file)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/concurrent/futures/thread.py", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 412, in run_nuclei_scan\n    result = subprocess.run(cmd, capture_output=True, text=True, timeout=SUBPROCESS_TIMEOUT * 2, check=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/subprocess.py", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command \'[\'/usr/local/bin/nuclei\', \'-l\', \'/home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt\', \'-t\', \'/home/x/Documents/Scrips/VulnSentry/canary.yaml\', \'-tags\', \'xss,subdomain-takeover,idor,rce,exposure\', \'-severity\', \'critical,high,medium\', \'-jsonl\', \'-o\', \'/home/x/Documents/Scrips/VulnSentry/results_20250701_071949.json\', \'-timeout\', \'20\', \'-c\', \'50\', \'-retries\', \'2\']\' returned non-zero exit status 1.')
+2025-07-01 07:20:01,994 [DEBUG] Exiting: send_message
+2025-07-01 07:20:01,995 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [-] ❌ Error en el pipeline para content-api-prod.n...
+2025-07-01 07:20:01,997 [DEBUG] [*] Tarea de escaneo finalizada y limpiada.
+2025-07-01 07:20:09,026 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:20:08 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])   soluciionalo solo corrige ojo solo corrige y soluciona 

@@ -3501,3 +3501,664 @@ Traceback (most recent call last):
   File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
     raise RuntimeError('This event loop is already running')
 RuntimeError: This event loop is already running
+2025-07-01 07:44:42,880 [DEBUG] Using selector: EpollSelector
+2025-07-01 07:44:42,881 [DEBUG] load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-07-01 07:44:42,882 [DEBUG] load_verify_locations cafile='/home/x/.venvs/arsenal/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-07-01 07:44:42,890 [DEBUG] load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-07-01 07:44:42,891 [DEBUG] load_verify_locations cafile='/home/x/.venvs/arsenal/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-07-01 07:44:42,898 [ERROR] [-] ❌ Directorio de plantillas de nuclei no encontrado en /home/x/.nuclei-templates. Ejecute &#x27;nuclei -update-templates&#x27;.
+2025-07-01 07:47:44,621 [DEBUG] Using selector: EpollSelector
+2025-07-01 07:47:44,622 [DEBUG] load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-07-01 07:47:44,622 [DEBUG] load_verify_locations cafile='/home/x/.venvs/arsenal/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-07-01 07:47:44,629 [DEBUG] load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-07-01 07:47:44,630 [DEBUG] load_verify_locations cafile='/home/x/.venvs/arsenal/lib/python3.12/site-packages/certifi/cacert.pem'
+2025-07-01 07:47:44,669 [INFO] [*] ✅ Resolución DNS de api.telegram.org: 149.154.167.220
+2025-07-01 07:47:44,857 [INFO] [*] ✅ Conexión TCP a api.telegram.org:443 exitosa.
+2025-07-01 07:47:44,858 [DEBUG] Entering: send_message
+2025-07-01 07:47:44,889 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:47:50,388 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b832660>
+2025-07-01 07:47:50,389 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b215350> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:47:50,603 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b542240>
+2025-07-01 07:47:50,604 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:50,606 [DEBUG] send_request_headers.complete
+2025-07-01 07:47:50,606 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:47:50,607 [DEBUG] send_request_body.complete
+2025-07-01 07:47:50,608 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:50,901 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:47:50 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'277'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:47:50,903 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:47:50,904 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:47:50,905 [DEBUG] receive_response_body.complete
+2025-07-01 07:47:50,905 [DEBUG] response_closed.started
+2025-07-01 07:47:50,906 [DEBUG] response_closed.complete
+2025-07-01 07:47:50,908 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 47, 50, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1135, supergroup_chat_created=False, text='¡Bot funcionando! Prueba de conexión.')
+2025-07-01 07:47:50,915 [DEBUG] Exiting: send_message
+2025-07-01 07:47:50,916 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: ¡Bot funcionando! Prueba de conexión....
+2025-07-01 07:47:50,918 [DEBUG] Entering: get_me
+2025-07-01 07:47:50,920 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:50,922 [DEBUG] send_request_headers.complete
+2025-07-01 07:47:50,922 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:47:50,923 [DEBUG] send_request_body.complete
+2025-07-01 07:47:50,924 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:51,105 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:47:50 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'250'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:47:51,106 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getMe "HTTP/1.1 200 OK"
+2025-07-01 07:47:51,107 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:47:51,107 [DEBUG] receive_response_body.complete
+2025-07-01 07:47:51,108 [DEBUG] response_closed.started
+2025-07-01 07:47:51,109 [DEBUG] response_closed.complete
+2025-07-01 07:47:51,111 [DEBUG] User(api_kwargs={'can_connect_to_business': False, 'has_main_web_app': False}, can_join_groups=True, can_read_all_group_messages=False, first_name='testeosss', id=8171547492, is_bot=True, supports_inline_queries=False, username='hsv7682_bot')
+2025-07-01 07:47:51,112 [DEBUG] Exiting: get_me
+2025-07-01 07:47:51,112 [DEBUG] This Bot is already initialized.
+2025-07-01 07:47:51,113 [INFO] Application started
+2025-07-01 07:47:51,114 [DEBUG] Updater started (polling)
+2025-07-01 07:47:51,114 [DEBUG] Start network loop retry bootstrap del webhook
+2025-07-01 07:47:51,114 [DEBUG] Deleting webhook
+2025-07-01 07:47:51,115 [DEBUG] Dropping pending updates from Telegram server
+2025-07-01 07:47:51,115 [DEBUG] Entering: delete_webhook
+2025-07-01 07:47:51,118 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:51,120 [DEBUG] send_request_headers.complete
+2025-07-01 07:47:51,120 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:47:51,122 [DEBUG] send_request_body.complete
+2025-07-01 07:47:51,122 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:51,309 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:47:51 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'68'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:47:51,311 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/deleteWebhook "HTTP/1.1 200 OK"
+2025-07-01 07:47:51,311 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:47:51,312 [DEBUG] receive_response_body.complete
+2025-07-01 07:47:51,313 [DEBUG] response_closed.started
+2025-07-01 07:47:51,314 [DEBUG] response_closed.complete
+2025-07-01 07:47:51,315 [DEBUG] True
+2025-07-01 07:47:51,315 [DEBUG] Exiting: delete_webhook
+2025-07-01 07:47:51,316 [DEBUG] Bootstrap done
+2025-07-01 07:47:51,317 [DEBUG] Waiting for polling to start
+2025-07-01 07:47:51,317 [DEBUG] Polling updates from Telegram started
+2025-07-01 07:47:51,318 [INFO] [*] Bot iniciado en modo polling.
+2025-07-01 07:47:51,318 [DEBUG] Start network loop retry getting Updates
+2025-07-01 07:47:51,319 [DEBUG] Entering: get_updates
+2025-07-01 07:47:51,321 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-07-01 07:47:51,822 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b063cb0>
+2025-07-01 07:47:51,823 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b2154d0> server_hostname='api.telegram.org' timeout=5.0
+2025-07-01 07:47:51,965 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825ba45f40>
+2025-07-01 07:47:51,967 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:47:51,967 [DEBUG] send_request_headers.complete
+2025-07-01 07:47:51,968 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:47:51,968 [DEBUG] send_request_body.complete
+2025-07-01 07:47:51,968 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:02,162 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:02 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:02,163 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:02,163 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:02,163 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:02,163 [DEBUG] response_closed.started
+2025-07-01 07:48:02,163 [DEBUG] response_closed.complete
+2025-07-01 07:48:02,164 [DEBUG] No new updates found.
+2025-07-01 07:48:02,164 [DEBUG] ()
+2025-07-01 07:48:02,164 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:02,164 [DEBUG] Entering: get_updates
+2025-07-01 07:48:02,165 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:02,165 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:02,166 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:02,166 [DEBUG] send_request_body.complete
+2025-07-01 07:48:02,166 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:11,381 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:11 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'351'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:11,382 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:11,383 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:11,384 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:11,385 [DEBUG] response_closed.started
+2025-07-01 07:48:11,385 [DEBUG] response_closed.complete
+2025-07-01 07:48:11,386 [DEBUG] Getting updates: [49347889]
+2025-07-01 07:48:11,389 [DEBUG] (Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 11, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=7, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1136, supergroup_chat_created=False, text='/status'), update_id=49347889),)
+2025-07-01 07:48:11,392 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:11,393 [DEBUG] Entering: get_updates
+2025-07-01 07:48:11,395 [DEBUG] Processing update Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 11, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=7, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1136, supergroup_chat_created=False, text='/status'), update_id=49347889)
+2025-07-01 07:48:11,400 [DEBUG] Entering: send_message
+2025-07-01 07:48:11,402 [DEBUG] close.started
+2025-07-01 07:48:11,403 [DEBUG] close.complete
+2025-07-01 07:48:11,404 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:11,405 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:48:11,406 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:11,407 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:11,408 [DEBUG] send_request_body.complete
+2025-07-01 07:48:11,408 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:11,892 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b063170>
+2025-07-01 07:48:11,893 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b215350> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:48:12,112 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b063a70>
+2025-07-01 07:48:12,113 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:12,115 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:12,115 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:12,116 [DEBUG] send_request_body.complete
+2025-07-01 07:48:12,117 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:12,402 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'662'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:12,402 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:48:12,403 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:12,403 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:12,403 [DEBUG] response_closed.started
+2025-07-01 07:48:12,404 [DEBUG] response_closed.complete
+2025-07-01 07:48:12,405 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 12, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=7, offset=2, type=<MessageEntityType.BOLD>),), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1137, message_thread_id=1136, reply_to_message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 11, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=7, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1136, supergroup_chat_created=False, text='/status'), supergroup_chat_created=False, text='✅ Estado: Libre para nuevos escaneos.')
+2025-07-01 07:48:12,407 [DEBUG] Exiting: send_message
+2025-07-01 07:48:15,579 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:15 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'349'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:15,581 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:15,581 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:15,582 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:15,583 [DEBUG] response_closed.started
+2025-07-01 07:48:15,583 [DEBUG] response_closed.complete
+2025-07-01 07:48:15,584 [DEBUG] Getting updates: [49347890]
+2025-07-01 07:48:15,586 [DEBUG] (Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 15, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=5, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1138, supergroup_chat_created=False, text='/help'), update_id=49347890),)
+2025-07-01 07:48:15,588 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:15,589 [DEBUG] Entering: get_updates
+2025-07-01 07:48:15,590 [DEBUG] Processing update Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 15, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=5, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1138, supergroup_chat_created=False, text='/help'), update_id=49347890)
+2025-07-01 07:48:15,595 [DEBUG] [*] Enviando mensaje de ayuda a chat_id -1002510568013: 🛡️ &lt;b&gt;VulnSentry: Comandos Disponibles&lt;/b&gt;
+
+🔍 /tar...
+2025-07-01 07:48:15,595 [DEBUG] Entering: send_message
+2025-07-01 07:48:15,598 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:15,600 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:15,601 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:15,602 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:15,603 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:15,603 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:15,604 [DEBUG] send_request_body.complete
+2025-07-01 07:48:15,604 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:15,605 [DEBUG] send_request_body.complete
+2025-07-01 07:48:15,605 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:15,869 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:15 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'1640'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:15,869 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:48:15,869 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:15,870 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:15,870 [DEBUG] response_closed.started
+2025-07-01 07:48:15,870 [DEBUG] response_closed.complete
+2025-07-01 07:48:15,871 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 15, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=32, offset=4, type=<MessageEntityType.BOLD>), MessageEntity(length=7, offset=41, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=6, offset=49, type=<MessageEntityType.CODE>), MessageEntity(length=11, offset=110, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=127, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=8, offset=178, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=235, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=8, offset=277, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=334, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=379, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=5, offset=431, type=<MessageEntityType.BOT_COMMAND>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1139, message_thread_id=1138, reply_to_message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 15, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=5, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1138, supergroup_chat_created=False, text='/help'), supergroup_chat_created=False, text='🛡️ VulnSentry: Comandos Disponibles\n\n🔍 /target domain - Inicia un escaneo para el dominio especificado (ej. example.com).\n📊 /status - Muestra el estado del escaneo actual.\n📜 /history - Lista los dominios escaneados previamente.\n🚫 /cancel - Cancela el escaneo en curso.\nℹ️ /version - Muestra la versión del bot y herramientas.\n⚙️ /config - Muestra la configuración actual.\n⏰ /uptime - Muestra el tiempo en ejecución del bot.\n❓ /help - Muestra esta ayuda.')
+2025-07-01 07:48:15,873 [DEBUG] Exiting: send_message
+2025-07-01 07:48:19,982 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:19 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'364'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:19,984 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:19,984 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:19,985 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:19,986 [DEBUG] response_closed.started
+2025-07-01 07:48:19,987 [DEBUG] response_closed.complete
+2025-07-01 07:48:19,988 [DEBUG] Getting updates: [49347891]
+2025-07-01 07:48:19,989 [DEBUG] (Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 19, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=19, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1141, supergroup_chat_created=False, text='/config@hsv7682_bot'), update_id=49347891),)
+2025-07-01 07:48:19,992 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:19,993 [DEBUG] Entering: get_updates
+2025-07-01 07:48:19,995 [DEBUG] Processing update Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 19, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=19, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1141, supergroup_chat_created=False, text='/config@hsv7682_bot'), update_id=49347891)
+2025-07-01 07:48:20,000 [DEBUG] Entering: send_message
+2025-07-01 07:48:20,004 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:20,006 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:20,008 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:20,009 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:20,010 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:20,010 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:20,011 [DEBUG] send_request_body.complete
+2025-07-01 07:48:20,012 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:20,013 [DEBUG] send_request_body.complete
+2025-07-01 07:48:20,014 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:20,280 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:20 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'948'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:20,280 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:48:20,281 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:20,281 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:20,281 [DEBUG] response_closed.started
+2025-07-01 07:48:20,282 [DEBUG] response_closed.complete
+2025-07-01 07:48:20,283 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 20, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=25, offset=4, type=<MessageEntityType.BOLD>),), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1142, message_thread_id=1141, reply_to_message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 19, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=19, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1141, supergroup_chat_created=False, text='/config@hsv7682_bot'), supergroup_chat_created=False, text='🛡️ VulnSentry: Configuración\nℹ️ NUCLEI_TAGS: xss,subdomain-takeover,idor,rce,exposure\nℹ️ NUCLEI_SEVERITY: critical,high,medium\nℹ️ HTTPX_TIMEOUT: 10s\nℹ️ NUCLEI_TIMEOUT: 20s\nℹ️ ALLOWED_CHAT_IDS: -1002510568013\nℹ️ DEBUG_MODE: True')
+2025-07-01 07:48:20,285 [DEBUG] Exiting: send_message
+2025-07-01 07:48:23,564 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:23 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'365'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:23,565 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:23,566 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:23,566 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:23,567 [DEBUG] response_closed.started
+2025-07-01 07:48:23,567 [DEBUG] response_closed.complete
+2025-07-01 07:48:23,568 [DEBUG] Getting updates: [49347892]
+2025-07-01 07:48:23,570 [DEBUG] (Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 23, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=20, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1143, supergroup_chat_created=False, text='/version@hsv7682_bot'), update_id=49347892),)
+2025-07-01 07:48:23,572 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:23,573 [DEBUG] Entering: get_updates
+2025-07-01 07:48:23,574 [DEBUG] Processing update Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 23, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=20, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1143, supergroup_chat_created=False, text='/version@hsv7682_bot'), update_id=49347892)
+2025-07-01 07:48:23,682 [DEBUG] [*] Nuclei version output: [[34mINF[0m] Nuclei Engine Version: v3.4.5
+[[34mINF[0m] Nuclei Config Directory: /home/x/.config/nuclei
+[[34mINF[0m] Nuclei Cache Directory: /home/x/.cache/nuclei
+[[34mINF[0m] PDCP Directory: /home/x/.pdcp
+2025-07-01 07:48:23,872 [DEBUG] [*] Subfinder version output: [[34mINF[0m] Current Version: v2.7.1
+[[34mINF[0m] Subfinder Config Directory: /home/x/.config/subfinder
+2025-07-01 07:48:24,101 [DEBUG] [*] Httpx version output: __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/
+
+		projectdiscovery.io
+
+[[34mINF[0m] Current Version: v1.7.0
+2025-07-01 07:48:24,101 [DEBUG] Entering: send_message
+2025-07-01 07:48:24,102 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:24,102 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:24,102 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:24,103 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:24,103 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:24,103 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:24,103 [DEBUG] send_request_body.complete
+2025-07-01 07:48:24,103 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:24,103 [DEBUG] send_request_body.complete
+2025-07-01 07:48:24,103 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:24,377 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:24 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'1589'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:24,378 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:48:24,378 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:24,378 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:24,379 [DEBUG] response_closed.started
+2025-07-01 07:48:24,379 [DEBUG] response_closed.complete
+2025-07-01 07:48:24,380 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 24, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=19, offset=4, type=<MessageEntityType.BOLD>), MessageEntity(length=7, offset=47, type=<MessageEntityType.URL>), MessageEntity(length=2, offset=489, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=6, offset=499, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=19, offset=615, type=<MessageEntityType.URL>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1144, message_thread_id=1143, reply_to_message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 23, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=20, offset=0, type=<MessageEntityType.BOT_COMMAND>),), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1143, supergroup_chat_created=False, text='/version@hsv7682_bot'), supergroup_chat_created=False, text='🛡️ VulnSentry: Versión\nℹ️ Versión del script: 0.0.0.1\nℹ️ Python: 3.12.3\nℹ️ python-telegram-bot: 20.7\nℹ️ Nuclei: [ [34mINF [0m] Nuclei Engine Version: v3.4.5\n[ [34mINF [0m] Nuclei Config Directory: /home/x/.config/nuclei\n[ [34mINF [0m] Nuclei Cache Directory: /home/x/.cache/nuclei\n[ [34mINF [0m] PDCP Directory: /home/x/.pdcp\nℹ️ Subfinder: [ [34mINF [0m] Current Version: v2.7.1\n[ [34mINF [0m] Subfinder Config Directory: /home/x/.config/subfinder\nℹ️ Httpx: __    __  __       _  __\n   / /_  / /_/ /_____ | |/ /\n  / __ \\/ __/ __/ __ \\|   /\n / / / / /_/ /_/ /_/ /   |\n/_/ /_/\\__/\\__/ .___/_/|_|\n             /_/\n\n  projectdiscovery.io\n\n[ [34mINF [0m] Current Version: v1.7.0')
+2025-07-01 07:48:24,382 [DEBUG] Exiting: send_message
+2025-07-01 07:48:34,318 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:34 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:34,319 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:34,320 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:34,321 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:34,322 [DEBUG] response_closed.started
+2025-07-01 07:48:34,323 [DEBUG] response_closed.complete
+2025-07-01 07:48:34,324 [DEBUG] No new updates found.
+2025-07-01 07:48:34,325 [DEBUG] ()
+2025-07-01 07:48:34,325 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:34,326 [DEBUG] Entering: get_updates
+2025-07-01 07:48:34,329 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:34,331 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:34,332 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:34,333 [DEBUG] send_request_body.complete
+2025-07-01 07:48:34,333 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:39,234 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:39 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'438'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:39,235 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:39,236 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:39,237 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:39,237 [DEBUG] response_closed.started
+2025-07-01 07:48:39,238 [DEBUG] response_closed.complete
+2025-07-01 07:48:39,239 [DEBUG] Getting updates: [49347893]
+2025-07-01 07:48:39,240 [DEBUG] (Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 39, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=7, offset=0, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=10, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=10, type=<MessageEntityType.BOLD>)), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1145, supergroup_chat_created=False, text='/target *.nba.com'), update_id=49347893),)
+2025-07-01 07:48:39,243 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:39,244 [DEBUG] Entering: get_updates
+2025-07-01 07:48:39,245 [DEBUG] Processing update Update(message=Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 39, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=7, offset=0, type=<MessageEntityType.BOT_COMMAND>), MessageEntity(length=7, offset=10, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=10, type=<MessageEntityType.BOLD>)), from_user=User(first_name='AIZEN 320', id=5447344249, is_bot=False, language_code='en', username='AIZEN_320'), group_chat_created=False, message_id=1145, supergroup_chat_created=False, text='/target *.nba.com'), update_id=49347893)
+2025-07-01 07:48:39,254 [DEBUG] Attempting to acquire lock 140197849936912 on /home/x/.cache/python-tldextract/3.12.3.final__arsenal__736426__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-07-01 07:48:39,256 [DEBUG] Lock 140197849936912 acquired on /home/x/.cache/python-tldextract/3.12.3.final__arsenal__736426__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-07-01 07:48:39,263 [DEBUG] Attempting to release lock 140197849936912 on /home/x/.cache/python-tldextract/3.12.3.final__arsenal__736426__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-07-01 07:48:39,263 [DEBUG] Lock 140197849936912 released on /home/x/.cache/python-tldextract/3.12.3.final__arsenal__736426__tldextract-5.3.0/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2025-07-01 07:48:39,303 [DEBUG] Entering: send_message
+2025-07-01 07:48:39,304 [DEBUG] close.started
+2025-07-01 07:48:39,304 [DEBUG] close.complete
+2025-07-01 07:48:39,304 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:39,305 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:48:39,305 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:39,305 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:39,305 [DEBUG] send_request_body.complete
+2025-07-01 07:48:39,305 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:39,699 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825a3f86b0>
+2025-07-01 07:48:39,700 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b215350> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:48:39,838 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b0cd010>
+2025-07-01 07:48:39,839 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:39,840 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:39,841 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:39,842 [DEBUG] send_request_body.complete
+2025-07-01 07:48:39,842 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:40,114 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:40 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'435'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:40,114 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:48:40,114 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:40,115 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:40,115 [DEBUG] response_closed.started
+2025-07-01 07:48:40,115 [DEBUG] response_closed.complete
+2025-07-01 07:48:40,115 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 48, 39, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=37, offset=4, type=<MessageEntityType.BOLD>), MessageEntity(length=7, offset=41, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=41, type=<MessageEntityType.BOLD>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1146, supergroup_chat_created=False, text='🛡️ VulnSentry: Iniciando escaneo para *.nba.com 🎯')
+2025-07-01 07:48:40,116 [DEBUG] Exiting: send_message
+2025-07-01 07:48:40,116 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: 🛡️ &lt;b&gt;VulnSentry: Iniciando escaneo para *.nba.com...
+2025-07-01 07:48:40,117 [INFO] [*] 🔎 Buscando subdominios para nba.com...
+2025-07-01 07:48:49,432 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:49 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:49,433 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:49,433 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:49,434 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:49,434 [DEBUG] response_closed.started
+2025-07-01 07:48:49,435 [DEBUG] response_closed.complete
+2025-07-01 07:48:49,436 [DEBUG] No new updates found.
+2025-07-01 07:48:49,436 [DEBUG] ()
+2025-07-01 07:48:49,437 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:49,437 [DEBUG] Entering: get_updates
+2025-07-01 07:48:49,439 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:49,441 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:49,442 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:49,443 [DEBUG] send_request_body.complete
+2025-07-01 07:48:49,443 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:59,609 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:48:59 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:48:59,611 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:48:59,611 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:48:59,612 [DEBUG] receive_response_body.complete
+2025-07-01 07:48:59,613 [DEBUG] response_closed.started
+2025-07-01 07:48:59,614 [DEBUG] response_closed.complete
+2025-07-01 07:48:59,615 [DEBUG] No new updates found.
+2025-07-01 07:48:59,616 [DEBUG] ()
+2025-07-01 07:48:59,616 [DEBUG] Exiting: get_updates
+2025-07-01 07:48:59,617 [DEBUG] Entering: get_updates
+2025-07-01 07:48:59,619 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:48:59,621 [DEBUG] send_request_headers.complete
+2025-07-01 07:48:59,622 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:48:59,623 [DEBUG] send_request_body.complete
+2025-07-01 07:48:59,624 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:05,159 [INFO] [+] ✅ 1140 subdominios encontrados en 25.04s.
+2025-07-01 07:49:05,159 [DEBUG] Entering: send_message
+2025-07-01 07:49:05,160 [DEBUG] close.started
+2025-07-01 07:49:05,160 [DEBUG] close.complete
+2025-07-01 07:49:05,160 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:49:05,650 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825a3faab0>
+2025-07-01 07:49:05,650 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b215350> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:49:05,791 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825b063320>
+2025-07-01 07:49:05,792 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:05,793 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:05,794 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:05,795 [DEBUG] send_request_body.complete
+2025-07-01 07:49:05,795 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:06,163 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:06 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'280'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:06,164 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:49:06,165 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:06,165 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:06,166 [DEBUG] response_closed.started
+2025-07-01 07:49:06,167 [DEBUG] response_closed.complete
+2025-07-01 07:49:06,168 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 49, 5, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1147, supergroup_chat_created=False, text='[+] ✅ 1140 subdominios encontrados en 25.04s.')
+2025-07-01 07:49:06,170 [DEBUG] Exiting: send_message
+2025-07-01 07:49:06,171 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [+] ✅ 1140 subdominios encontrados en 25.04s....
+2025-07-01 07:49:06,172 [INFO] [*] 🌐 Validando subdominios activos con httpx...
+2025-07-01 07:49:06,735 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:07,193 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:07,467 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:07,729 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:08,266 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:08,786 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:09,230 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:09,622 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:09,849 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:09 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:09,851 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:49:09,852 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:09,852 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:09,853 [DEBUG] response_closed.started
+2025-07-01 07:49:09,854 [DEBUG] response_closed.complete
+2025-07-01 07:49:09,855 [DEBUG] No new updates found.
+2025-07-01 07:49:09,856 [DEBUG] ()
+2025-07-01 07:49:09,856 [DEBUG] Exiting: get_updates
+2025-07-01 07:49:09,857 [DEBUG] Entering: get_updates
+2025-07-01 07:49:09,860 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:09,861 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:09,862 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:09,863 [DEBUG] send_request_body.complete
+2025-07-01 07:49:09,864 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:09,866 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:10,357 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:10,689 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:11,199 [WARNING] [-] Línea no parseada: flag provided but not defined: -http-header
+2025-07-01 07:49:11,200 [INFO] [+] ✅ 0 subdominios activos detectados en 5.03s.
+2025-07-01 07:49:11,201 [DEBUG] Entering: send_message
+2025-07-01 07:49:11,203 [DEBUG] close.started
+2025-07-01 07:49:11,204 [DEBUG] close.complete
+2025-07-01 07:49:11,205 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:49:11,693 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825a224770>
+2025-07-01 07:49:11,694 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b215350> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:49:11,900 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825a3f8470>
+2025-07-01 07:49:11,901 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:11,902 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:11,903 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:11,904 [DEBUG] send_request_body.complete
+2025-07-01 07:49:11,904 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:12,186 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'283'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:12,186 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:49:12,186 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:12,187 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:12,187 [DEBUG] response_closed.started
+2025-07-01 07:49:12,187 [DEBUG] response_closed.complete
+2025-07-01 07:49:12,187 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 49, 12, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1148, supergroup_chat_created=False, text='[+] ✅ 0 subdominios activos detectados en 5.03s.')
+2025-07-01 07:49:12,188 [DEBUG] Exiting: send_message
+2025-07-01 07:49:12,188 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [+] ✅ 0 subdominios activos detectados en 5.03s....
+2025-07-01 07:49:12,188 [INFO] [*] 🔄 Fusionando dominios de target.txt...
+2025-07-01 07:49:12,193 [INFO] [+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt actualizado con 1 dominios únicos.
+2025-07-01 07:49:12,194 [DEBUG] Entering: send_message
+2025-07-01 07:49:12,195 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:12,195 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:12,195 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:12,196 [DEBUG] send_request_body.complete
+2025-07-01 07:49:12,196 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:12,464 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'339'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:12,466 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:49:12,466 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:12,467 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:12,468 [DEBUG] response_closed.started
+2025-07-01 07:49:12,468 [DEBUG] response_closed.complete
+2025-07-01 07:49:12,470 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 49, 12, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1149, supergroup_chat_created=False, text='[+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt actualizado con 1 dominios únicos.')
+2025-07-01 07:49:12,473 [DEBUG] Exiting: send_message
+2025-07-01 07:49:12,473 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [+] ✅ /home/x/Documents/Scrips/VulnSentry/hubspot_...
+2025-07-01 07:49:12,475 [INFO] [*] 🛡️ Iniciando escaneo con nuclei...
+2025-07-01 07:49:12,475 [INFO] [*] Ejecutando comando nuclei: /usr/local/bin/nuclei -l /home/x/Documents/Scrips/VulnSentry/hubspot_scope_live.txt -tags xss,subdomain-takeover,idor,rce,exposure -severity critical,high,medium -jsonl -o /home/x/Documents/Scrips/VulnSentry/results_20250701_074840.json -timeout 20 -c 50 -retries 2
+2025-07-01 07:49:21,973 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:19 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:21,975 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:49:21,975 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:21,976 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:21,977 [DEBUG] response_closed.started
+2025-07-01 07:49:21,978 [DEBUG] response_closed.complete
+2025-07-01 07:49:21,979 [DEBUG] No new updates found.
+2025-07-01 07:49:21,979 [DEBUG] ()
+2025-07-01 07:49:21,980 [DEBUG] Exiting: get_updates
+2025-07-01 07:49:21,980 [DEBUG] Entering: get_updates
+2025-07-01 07:49:21,982 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:21,984 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:21,984 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:21,985 [DEBUG] send_request_body.complete
+2025-07-01 07:49:21,986 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:32,178 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:32 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:32,180 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:49:32,181 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:32,181 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:32,182 [DEBUG] response_closed.started
+2025-07-01 07:49:32,183 [DEBUG] response_closed.complete
+2025-07-01 07:49:32,185 [DEBUG] No new updates found.
+2025-07-01 07:49:32,185 [DEBUG] ()
+2025-07-01 07:49:32,186 [DEBUG] Exiting: get_updates
+2025-07-01 07:49:32,187 [DEBUG] Entering: get_updates
+2025-07-01 07:49:32,189 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:32,191 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:32,191 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:32,193 [DEBUG] send_request_body.complete
+2025-07-01 07:49:32,193 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:42,326 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:42 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:42,327 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:49:42,328 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:42,329 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:42,329 [DEBUG] response_closed.started
+2025-07-01 07:49:42,330 [DEBUG] response_closed.complete
+2025-07-01 07:49:42,330 [DEBUG] No new updates found.
+2025-07-01 07:49:42,331 [DEBUG] ()
+2025-07-01 07:49:42,331 [DEBUG] Exiting: get_updates
+2025-07-01 07:49:42,331 [DEBUG] Entering: get_updates
+2025-07-01 07:49:42,333 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:42,336 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:42,337 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:42,339 [DEBUG] send_request_body.complete
+2025-07-01 07:49:42,340 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:52,480 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:49:52 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:49:52,482 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:49:52,483 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:49:52,484 [DEBUG] receive_response_body.complete
+2025-07-01 07:49:52,485 [DEBUG] response_closed.started
+2025-07-01 07:49:52,485 [DEBUG] response_closed.complete
+2025-07-01 07:49:52,486 [DEBUG] No new updates found.
+2025-07-01 07:49:52,486 [DEBUG] ()
+2025-07-01 07:49:52,487 [DEBUG] Exiting: get_updates
+2025-07-01 07:49:52,487 [DEBUG] Entering: get_updates
+2025-07-01 07:49:52,489 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:49:52,491 [DEBUG] send_request_headers.complete
+2025-07-01 07:49:52,492 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:49:52,493 [DEBUG] send_request_body.complete
+2025-07-01 07:49:52,493 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:02,703 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:02 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:02,704 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:50:02,708 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:02,709 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:02,710 [DEBUG] response_closed.started
+2025-07-01 07:50:02,710 [DEBUG] response_closed.complete
+2025-07-01 07:50:02,712 [DEBUG] No new updates found.
+2025-07-01 07:50:02,713 [DEBUG] ()
+2025-07-01 07:50:02,714 [DEBUG] Exiting: get_updates
+2025-07-01 07:50:02,714 [DEBUG] Entering: get_updates
+2025-07-01 07:50:02,717 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:02,719 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:02,720 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:02,721 [DEBUG] send_request_body.complete
+2025-07-01 07:50:02,721 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:12,851 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:12,853 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:50:12,853 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:12,854 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:12,855 [DEBUG] response_closed.started
+2025-07-01 07:50:12,856 [DEBUG] response_closed.complete
+2025-07-01 07:50:12,857 [DEBUG] No new updates found.
+2025-07-01 07:50:12,857 [DEBUG] ()
+2025-07-01 07:50:12,858 [DEBUG] Exiting: get_updates
+2025-07-01 07:50:12,859 [DEBUG] Entering: get_updates
+2025-07-01 07:50:12,861 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:12,863 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:12,864 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:12,865 [DEBUG] send_request_body.complete
+2025-07-01 07:50:12,866 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:20,424 [WARNING] [*] Nuclei STDERR:
+
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.4.5
+
+		projectdiscovery.io
+
+[[93mWRN[0m] The concurrency value is higher than max-host-error
+[[34mINF[0m] Adjusting max-host-error to the concurrency value: 50
+[[34mINF[0m] Current nuclei version: v3.4.5 ([91moutdated[0m)
+[[34mINF[0m] Current nuclei-templates version: v10.2.4 ([92mlatest[0m)
+[[93mWRN[0m] Scan results upload to clo
+2025-07-01 07:50:20,424 [WARNING] [-] ⚠️ Escaneo nuclei no generó resultados en /home/x/Documents/Scrips/VulnSentry/results_20250701_074840.json.
+2025-07-01 07:50:20,424 [DEBUG] Entering: send_message
+2025-07-01 07:50:20,425 [DEBUG] close.started
+2025-07-01 07:50:20,426 [DEBUG] close.complete
+2025-07-01 07:50:20,426 [DEBUG] connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=10.0 socket_options=None
+2025-07-01 07:50:20,912 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825a3f9940>
+2025-07-01 07:50:20,912 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x7f825b215350> server_hostname='api.telegram.org' timeout=10.0
+2025-07-01 07:50:21,049 [DEBUG] start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f825a3f9d90>
+2025-07-01 07:50:21,050 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:21,050 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:21,050 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:21,051 [DEBUG] send_request_body.complete
+2025-07-01 07:50:21,051 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:21,327 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:21 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'356'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:21,327 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:50:21,328 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:21,328 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:21,328 [DEBUG] response_closed.started
+2025-07-01 07:50:21,328 [DEBUG] response_closed.complete
+2025-07-01 07:50:21,329 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 50, 21, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1150, supergroup_chat_created=False, text='[-] ⚠️ Escaneo nuclei no generó resultados en /home/x/Documents/Scrips/VulnSentry/results_20250701_074840.json.')
+2025-07-01 07:50:21,329 [DEBUG] Exiting: send_message
+2025-07-01 07:50:21,330 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [-] ⚠️ Escaneo nuclei no generó resultados en /hom...
+2025-07-01 07:50:21,330 [INFO] [*] 📊 Procesando resultados del escaneo...
+2025-07-01 07:50:21,331 [WARNING] [-] ⚠️ No se encontraron vulnerabilidades.
+2025-07-01 07:50:21,331 [DEBUG] Entering: send_message
+2025-07-01 07:50:21,332 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:21,333 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:21,333 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:21,333 [DEBUG] send_request_body.complete
+2025-07-01 07:50:21,334 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:21,601 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:21 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'282'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:21,601 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:50:21,602 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:21,602 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:21,602 [DEBUG] response_closed.started
+2025-07-01 07:50:21,602 [DEBUG] response_closed.complete
+2025-07-01 07:50:21,603 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 50, 21, tzinfo=<UTC>), delete_chat_photo=False, from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1151, supergroup_chat_created=False, text='[-] ⚠️ No se encontraron vulnerabilidades.')
+2025-07-01 07:50:21,605 [DEBUG] Exiting: send_message
+2025-07-01 07:50:21,605 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: [-] ⚠️ No se encontraron vulnerabilidades....
+2025-07-01 07:50:21,606 [INFO] 🎉 &lt;b&gt;Escaneo de nba.com finalizado exitosamente!&lt;/b&gt;
+2025-07-01 07:50:21,606 [DEBUG] Entering: send_message
+2025-07-01 07:50:21,607 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:21,608 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:21,608 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:21,608 [DEBUG] send_request_body.complete
+2025-07-01 07:50:21,608 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:21,870 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:21 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'455'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:21,871 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/sendMessage "HTTP/1.1 200 OK"
+2025-07-01 07:50:21,871 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:21,872 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:21,872 [DEBUG] response_closed.started
+2025-07-01 07:50:21,872 [DEBUG] response_closed.complete
+2025-07-01 07:50:21,873 [DEBUG] Message(channel_chat_created=False, chat=Chat(id=-1002510568013, title='Social Luxury', type=<ChatType.SUPERGROUP>), date=datetime.datetime(2025, 7, 1, 12, 50, 21, tzinfo=<UTC>), delete_chat_photo=False, entities=(MessageEntity(length=11, offset=3, type=<MessageEntityType.BOLD>), MessageEntity(length=7, offset=14, type=<MessageEntityType.URL>), MessageEntity(length=7, offset=14, type=<MessageEntityType.BOLD>), MessageEntity(length=25, offset=21, type=<MessageEntityType.BOLD>)), from_user=User(first_name='testeosss', id=8171547492, is_bot=True, username='hsv7682_bot'), group_chat_created=False, message_id=1152, supergroup_chat_created=False, text='🎉 Escaneo de nba.com finalizado exitosamente!')
+2025-07-01 07:50:21,874 [DEBUG] Exiting: send_message
+2025-07-01 07:50:21,875 [DEBUG] [*] Mensaje enviado a chat_id -1002510568013: 🎉 &lt;b&gt;Escaneo de nba.com finalizado exitosamente!&lt;/...
+2025-07-01 07:50:21,875 [DEBUG] [*] Tarea de escaneo finalizada y limpiada.
+2025-07-01 07:50:23,064 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:22 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:23,064 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:50:23,065 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:23,065 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:23,065 [DEBUG] response_closed.started
+2025-07-01 07:50:23,065 [DEBUG] response_closed.complete
+2025-07-01 07:50:23,066 [DEBUG] No new updates found.
+2025-07-01 07:50:23,066 [DEBUG] ()
+2025-07-01 07:50:23,066 [DEBUG] Exiting: get_updates
+2025-07-01 07:50:23,066 [DEBUG] Entering: get_updates
+2025-07-01 07:50:23,067 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:23,067 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:23,068 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:23,068 [DEBUG] send_request_body.complete
+2025-07-01 07:50:23,068 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:33,304 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 01 Jul 2025 12:50:33 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'23'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-07-01 07:50:33,305 [INFO] HTTP Request: POST https://api.telegram.org/bot8171547492:AAGqTco-kolQ_pGvp7oHm2WlRobNidYnDkM/getUpdates "HTTP/1.1 200 OK"
+2025-07-01 07:50:33,306 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2025-07-01 07:50:33,306 [DEBUG] receive_response_body.complete
+2025-07-01 07:50:33,307 [DEBUG] response_closed.started
+2025-07-01 07:50:33,308 [DEBUG] response_closed.complete
+2025-07-01 07:50:33,308 [DEBUG] No new updates found.
+2025-07-01 07:50:33,309 [DEBUG] ()
+2025-07-01 07:50:33,309 [DEBUG] Exiting: get_updates
+2025-07-01 07:50:33,310 [DEBUG] Entering: get_updates
+2025-07-01 07:50:33,312 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:33,313 [DEBUG] send_request_headers.complete
+2025-07-01 07:50:33,314 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2025-07-01 07:50:33,315 [DEBUG] send_request_body.complete
+2025-07-01 07:50:33,315 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2025-07-01 07:50:42,073 [WARNING] [*] Señal SIGINT recibida, cancelando tareas...
+2025-07-01 07:50:42,075 [INFO] [*] Deteniendo aplicación...
+2025-07-01 07:50:42,075 [INFO] Application is stopping. This might take a moment.
+2025-07-01 07:50:42,076 [DEBUG] Waiting for update_queue to join
+2025-07-01 07:50:42,076 [DEBUG] receive_response_headers.failed exception=CancelledError()
+2025-07-01 07:50:42,077 [DEBUG] response_closed.started
+2025-07-01 07:50:42,077 [WARNING] Fetching updates got a asyncio.CancelledError. Ignoring as this task may onlybe closed via `Application.stop`.
+2025-07-01 07:50:42,078 [DEBUG] Dropping pending updates
+2025-07-01 07:50:42,079 [DEBUG] Application stopped fetching of updates.
+2025-07-01 07:50:42,079 [DEBUG] Waiting for `create_task` calls to be processed
+2025-07-01 07:50:42,080 [INFO] Application.stop() complete
+2025-07-01 07:50:42,080 [DEBUG] response_closed.complete
+2025-07-01 07:50:42,081 [DEBUG] Network loop retry getting Updates was cancelled
+2025-07-01 07:50:42,082 [DEBUG] close.started
+2025-07-01 07:50:42,083 [DEBUG] close.complete
+2025-07-01 07:50:42,083 [ERROR] [-] Error cerrando aplicación: This Updater is still running!
+2025-07-01 07:50:42,084 [ERROR] unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<main() done, defined at /home/x/Documents/Scrips/VulnSentry/main.py:751> exception=RuntimeError('This event loop is already running')>
+Traceback (most recent call last):
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/base_events.py", line 685, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 759, in main
+    await bot.start()
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 732, in start
+    await asyncio.sleep(1)
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/x/Documents/Scrips/VulnSentry/main.py", line 764, in main
+    loop.run_until_complete(loop.shutdown_asyncgens())
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/base_events.py", line 663, in run_until_complete
+    self._check_running()
+  File "/home/x/.pyenv/versions/3.12.3/lib/python3.12/asyncio/base_events.py", line 622, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running

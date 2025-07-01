@@ -94,8 +94,6 @@ HISTORY_FILE = BASE_DIR / "targets_completed.txt"
 CVE_LOG_FILE = BASE_DIR / "cve_log.json"
 CVE_LOG_BACKUP = BASE_DIR / "cve_log_backup.json"
 TAGS = os.getenv("NUCLEI_TAGS", "xss,subdomain-takeover,idor,rce,exposure")
-CANARY_TEMPLATE = os.getenv("CANARY_TEMPLATE", "")
-CANARY_DOMAIN = os.getenv("CANARY_DOMAIN", "")
 SEVERITY = os.getenv("NUCLEI_SEVERITY", "critical,high,medium")
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TOKEN_REGEX = re.compile(r"^\d+:[A-Za-z0-9_-]{35}$")
@@ -120,7 +118,7 @@ HTTPX_TIMEOUT = int(os.getenv("HTTPX_TIMEOUT", 10))
 NUCLEI_TIMEOUT = int(os.getenv("NUCLEI_TIMEOUT", 20))
 NUCLEI_CONCURRENCY = int(os.getenv("NUCLEI_CONCURRENCY", 50))
 REPORT_INTERVAL = int(os.getenv("REPORT_INTERVAL", 600))
-DOMAIN_REGEX = re.compile(r"^(?:[a-zA-Z0-9-]{1,63}\.)+[a-zA-Z0-9-]{1,63}$")
+DOMAIN_REGEX = re.compile(r"^(?:\*?\.)?(?:[a-zA-Z0-9-]{1,63}\.)+[a-zA-Z0-9-]{1,63}$")  # Permitir comodines
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15",
@@ -143,7 +141,7 @@ for var_name, var_value in [
         raise ValueError(f"{var_name} debe ser un número positivo")
 
 class VulnSentry:
-    """Bot para escanear vulnerabilidades usando subfinder, httpx y nuclei con Canarytoken."""
+    """Bot para escanear vulnerabilidades usando subfinder, httpx y nuclei."""
     def __init__(self):
         self.app = Application.builder().token(TELEGRAM_TOKEN).read_timeout(10.0).connect_timeout(10.0).pool_timeout(30).build()
         self.scan_lock = asyncio.Lock()
@@ -165,9 +163,11 @@ class VulnSentry:
             if not os.access(resolved_path, os.X_OK):
                 self.log(f"[-] ❌ {tool} en {resolved_path} no es ejecutable.", logging.ERROR)
                 raise PermissionError(f"{tool} no es ejecutable.")
-        if CANARY_TEMPLATE and not Path(CANARY_TEMPLATE).exists():
-            self.log(f"[-] ❌ Template de canario {CANARY_TEMPLATE} no encontrado.", logging.ERROR)
-            raise FileNotFoundError(f"Template de canario {CANARY_TEMPLATE} no encontrado.")
+        # Validar directorio de plantillas de nuclei
+        nuclei_templates_dir = os.path.expanduser("~/.config/nuclei/templates")
+        if not os.path.exists(nuclei_templates_dir):
+            self.log(f"[-] ❌ Directorio de plantillas de nuclei no encontrado en {nuclei_templates_dir}. Ejecute 'nuclei -update-templates'.", logging.ERROR)
+            raise FileNotFoundError(f"Directorio de plantillas de nuclei no encontrado.")
 
     def validate_network(self):
         """Valida resolución DNS y conectividad a api.telegram.org."""
@@ -223,7 +223,6 @@ class VulnSentry:
             self.log(f"[*] Mensaje enviado a chat_id {chat_id}: {message[:50]}...", logging.DEBUG)
         except telegram.error.BadRequest as e:
             self.log(f"[-] Error de parseo HTML en mensaje: {message[:100]}... Error: {e}", logging.ERROR)
-            # Intentar enviar sin parse_mode como respaldo
             await self.app.bot.send_message(chat_id=chat_id, text=message, parse_mode=None)
             self.log(f"[*] Mensaje enviado sin parse_mode a chat_id {chat_id}: {message[:50]}...", logging.DEBUG)
         except Exception as e:
@@ -309,7 +308,7 @@ class VulnSentry:
         """Ejecuta subfinder para encontrar subdominios."""
         self.log(f"[*] 🔎 Buscando subdominios para {domain}...", logging.INFO)
         start_time = time.time()
-        cmd = [SUBFINDER_BIN, "-d", domain, "-silent"]
+        cmd = [SUBFINDER_BIN, "-d", domain, "-silent", "-recursive"]
         if SUBFINDER_RESOLVERS:
             cmd.extend(["-r", SUBFINDER_RESOLVERS])
         try:
@@ -398,26 +397,35 @@ class VulnSentry:
         return message
 
     def run_nuclei_scan(self, results_file):
-        """Ejecuta nuclei con solo el template de Canarytoken."""
+        """Ejecuta nuclei con plantillas predeterminadas."""
         self.log("[*] 🛡️ Iniciando escaneo con nuclei...", logging.INFO)
         start_time = time.time()
         cmd = [
-            NUCLEI_BIN, "-l", str(SCOPE_FILE), "-t", str(CANARY_TEMPLATE),
+            NUCLEI_BIN, "-l", str(SCOPE_FILE),
             "-tags", TAGS, "-severity", SEVERITY, "-jsonl",
             "-o", results_file, "-timeout", str(NUCLEI_TIMEOUT),
             "-c", str(NUCLEI_CONCURRENCY), "-retries", "2"
         ]
-        self.log(f"[*] Usando template de canario: {CANARY_TEMPLATE} con dominio {CANARY_DOMAIN}", logging.INFO)
+        self.log(f"[*] Ejecutando comando nuclei: {' '.join(cmd)}", logging.INFO)
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=SUBPROCESS_TIMEOUT * 2, check=True)
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                timeout=SUBPROCESS_TIMEOUT * 2
+            )
             if result.stdout:
                 self.log(f"[*] Nuclei STDOUT:\n{result.stdout[:500]}", logging.DEBUG)
             if result.stderr:
                 self.log(f"[*] Nuclei STDERR:\n{result.stderr[:500]}", logging.WARNING)
-            if not Path(results_file).is_file() or os.path.getsize(results_file) == 0:
-                message = f"[-] ❌ Escaneo nuclei no generó resultados en {results_file}."
+            if result.returncode != 0:
+                message = f"[-] ❌ Error en nuclei: {result.stderr[:500]}"
                 self.log(message, logging.ERROR)
-                raise ValueError("Nuclei no devolvió resultados")
+                raise ValueError(f"Nuclei falló con código {result.returncode}: {result.stderr[:500]}")
+            if not Path(results_file).is_file() or os.path.getsize(results_file) == 0:
+                message = f"[-] ⚠️ Escaneo nuclei no generó resultados en {results_file}."
+                self.log(message, logging.WARNING)
+                return results_file, message
             try:
                 with open(results_file, "r", encoding="utf-8") as f:
                     lines = f.readlines()
@@ -495,7 +503,7 @@ class VulnSentry:
                     await self.send_message_to_all(msg)
                 else:
                     self.log(f"[*] No se encontraron subdominios, escaneando solo el dominio raíz: {domain}", logging.INFO)
-                    live_subdomains = [domain]  # Usar dominio raíz si no hay subdominios
+                    live_subdomains = [domain]
                 msg = await asyncio.get_running_loop().run_in_executor(self.executor, self.merge_targets, live_subdomains, domain)
                 await self.send_message_to_all(msg)
                 results_file, msg = await asyncio.get_running_loop().run_in_executor(self.executor, self.run_nuclei_scan, results_file)
@@ -518,7 +526,7 @@ class VulnSentry:
                 self.log(message, logging.WARNING)
                 await self.send_message_to_all(message)
             except Exception as e:
-                message = f"[-] ❌ Error en el pipeline para {html.escape(domain)}: {str(e)}\n{traceback.format_exc()}"
+                message = f"[-] ❌ Error en el pipeline para {html.escape(domain)}: {str(e)}"
                 self.log(message, logging.ERROR)
                 await self.send_message_to_all(message)
             finally:
@@ -551,7 +559,7 @@ class VulnSentry:
             return
         except ValueError:
             pass
-        ext = tldextract.extract(domain)
+        ext = tldextract.extract(domain.lstrip('*.'))
         if not ext.top_domain_under_public_suffix:
             await update.message.reply_text("❓ Dominio inválido. Usa un dominio válido (ej. example.com).", parse_mode="HTML")
             return
@@ -560,7 +568,7 @@ class VulnSentry:
                 await update.message.reply_text("⏳ Escaneo en curso. Por favor, espera a que termine.", parse_mode="HTML")
                 return
             await self.send_message(chat_id, f"🛡️ <b>VulnSentry: Iniciando escaneo para {html.escape(domain)}</b> 🎯")
-            self.scan_task = asyncio.create_task(self.run_scan(domain, chat_id))
+            self.scan_task = asyncio.create_task(self.run_scan(domain.lstrip('*.'), chat_id))
             self.scan_task.add_done_callback(self.done_callback)
 
     async def status(self, update, context):
@@ -586,7 +594,7 @@ class VulnSentry:
             return
         try:
             with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-                domains = f.read().splitlines()[-10:]  # Últimos 10 dominios
+                domains = f.read().splitlines()[-10:]
             message = "📜 <b>VulnSentry: Historial de Escaneos</b>\n" + "\n".join(map(html.escape, domains))
             await update.message.reply_text(message[:4096], parse_mode="HTML")
         except PermissionError as e:
@@ -657,7 +665,7 @@ class VulnSentry:
             self.log(f"[-] Error obteniendo versión de httpx: {e}", logging.ERROR)
         version_info = (
             "🛡️ <b>VulnSentry: Versión</b>\n"
-            f"ℹ️ Versión del script: 1.0.0\n"
+            f"ℹ️ Versión del script: 0.0.0.1\n"
             f"ℹ️ Python: {sys.version.split()[0]}\n"
             f"ℹ️ python-telegram-bot: {telegram.__version__}\n"
             f"ℹ️ Nuclei: {nuclei_version}\n"
@@ -674,12 +682,10 @@ class VulnSentry:
             return
         config_info = (
             "🛡️ <b>VulnSentry: Configuración</b>\n"
-            f"ℹ️ CANARY_TEMPLATE: {CANARY_TEMPLATE}\n"
-            f"ℹ️ CANARY_DOMAIN: {CANARY_DOMAIN}\n"
-            f"ℹ️ HTTPX_TIMEOUT: {HTTPX_TIMEOUT}s\n"
-            f"ℹ️ NUCLEI_TIMEOUT: {NUCLEI_TIMEOUT}s\n"
             f"ℹ️ NUCLEI_TAGS: {TAGS}\n"
             f"ℹ️ NUCLEI_SEVERITY: {SEVERITY}\n"
+            f"ℹ️ HTTPX_TIMEOUT: {HTTPX_TIMEOUT}s\n"
+            f"ℹ️ NUCLEI_TIMEOUT: {NUCLEI_TIMEOUT}s\n"
             f"ℹ️ ALLOWED_CHAT_IDS: {', '.join(map(str, ALLOWED_CHAT_IDS))}\n"
             f"ℹ️ DEBUG_MODE: {DEBUG_MODE}"
         )
@@ -722,7 +728,6 @@ class VulnSentry:
             asyncio.create_task(self.report_cve_progress())
             await self.app.updater.start_polling(drop_pending_updates=True)
             self.log("[*] Bot iniciado en modo polling.", logging.INFO)
-            # Mantener el bot corriendo hasta que se reciba una señal
             while not self.cancel_event.is_set():
                 await asyncio.sleep(1)
         except telegram.error.InvalidToken as e:
