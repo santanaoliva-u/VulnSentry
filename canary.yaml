@@ -1,0 +1,10 @@
+id: dns-canary
+info:
+  name: DNS Canary Detection
+  severity: info
+  description: Triggers a DNS request to a controlled domain
+dns:
+  - name: "{{CANARY_DOMAIN}}"
+    type: A
+    class: IN
+    recursion: true

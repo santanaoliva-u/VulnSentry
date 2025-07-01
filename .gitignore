@@ -1,0 +1,20 @@
+# Archivos de entorno
+.env
+.env.*
+.envs/
+**/.env
+**/.env.*
+**/.envs/
+
+# Archivos de entorno ocultos en subdirectorios (absoluto o relativo)
+*/.env
+*/.env.*
+*/.envs/
+
+# Backups o temporales de .env
+.env.bak
+.env.local
+.envrc
+.envrc.*
+.env.*.bak
+
